@@ -1,0 +1,67 @@
+%style(type="text/css")
+  :sass
+    .value
+      font-weight: bold
+      padding-left: 10px
+      
+    .section
+      padding-top: 10px
+    
+    .appt_request
+      font-size: 12pt
+      .pet-name
+        font-weight: bold
+      .owner-info
+        margin-top: 16px
+        padding: 10px
+        border-top: solid 1px #666666
+        border-bottom: solid 1px #666666
+        background-color: rgba(242,242,242, .8)
+      .appointments
+        .appt-1
+          padding-top: 8px
+      .comments
+        padding-top: 16px
+        padding-bottom: 8px
+        .comment-text
+          padding: 10px
+          border-top: solid 1px #666666
+          border-bottom: solid 1px #666666
+          background-color: rgba(242,242,242, .8)
+  
+.appt_request
+  An appointment has been requested for&nbsp;
+  %span.pet-name #{@appointment.pet_name} 
+  %span (#{@appointment.species})
+  %span
+    , a 
+  %span.patient_type #{@appointment.patient_type} 
+  %span 
+    patient.
+
+  .section
+    Reason for visit: 
+    %span.value #{@appointment.reason}
+
+  .appointments.section
+    Requested appointment times are:
+    .value.appt-1
+      #{@appointment.dates_requested}
+
+  .owner-info
+    %div
+      Contact: 
+      %span.value
+        #{@appointment.first_name} #{@appointment.last_name}
+    .section
+      Email:   #{@appointment.email}
+    .section
+      Phone: 
+      %span.value
+        #{@appointment.phone}
+
+  - if @appointment.comments
+    .comments
+      Additional Comments:
+      .comment-text
+        #{@appointment.comments}
