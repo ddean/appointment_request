@@ -2,3 +2,35 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.page {
+  padding-left: 109px;
+  margin-right: 81px;
+  
+  .header {
+    background-color: rgb(166,186, 137);
+    height: 130px;
+    width: 100%;
+  
+    .banner {
+      margin-left: auto;
+      margin-right: auto;
+      background: image_url("banner.jpeg");
+      height: 130px;
+      width: 800px;
+    }
+  }
+  
+  .appointment-request {
+    padding: 12px;
+    background-color: rgb(191,214,185);
+  }
+}
+
+.sched-warning {
+  padding: 8px 0px 18px 50px;
+}
+
+.centered {
+  margin-left: auto;
+  margin-right: auto;
+}

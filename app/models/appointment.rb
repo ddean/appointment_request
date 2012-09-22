@@ -12,6 +12,7 @@ class Appointment
       record.errors.add attr, "is not a valid date"     
     else
       record.errors.add attr, "is in the past" if value && value < Date.today
+      record.errors.add attr, "please phone the clinic for same day appointments" if value && value == Date.today
       record.errors.add attr, "is too far in the future" if value && value > (Date.today + 90.days)
     end
   end
