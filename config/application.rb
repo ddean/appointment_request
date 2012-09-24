@@ -62,5 +62,20 @@ module AppointmentRequest
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    config.action_mailer.smtp_settings = {
+      :address              => "smtp.parkcentrevets.com",
+      :domain               => "parkcentrevets.com",
+      :user_name            => ENV['SMTP_USER_NAME'], #{}"appointment-requests@parkcentrevets.com",
+      :password             => ENV['SMTP_PASSWORD'],
+      :authentication       => :plain
+    }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.logger = Rails.logger
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.default_url_options = {
+      :host => "parkcentrevets.com"
+    }
   end
 end
