@@ -3,94 +3,95 @@
     .banner
   %form.form-horizontal.appointment-request(accept-charset="UTF-8" id="appointment-request-form")
     %legend Request Appointment
-    .help-block.sched-warning
-      IMPORTANT: To schedule urgent or same day appointments please phone the hospital at 510.521.1700.
-    .control-group
-      %label.control-label Name
-      .controls
-        %input{:name => "first_name", :type => 'text', :placeholder => "First"}
-        %input{:name => "last_name", :type => 'text', :placeholder => "Last"}
-        %span(class="help-inline")
-
-    .control-group
-      %label.control-label Pet's Name
-      .controls
-        %input{:type => 'text', :name => "pet_name"}
-        %span(class="help-inline")
-      
-    .control-group
-      %label.control-label Pet's Species
-      .controls
-        %select.input-small{:name => "species"}
-          %option{:value => "feline"}
-            Cat
-          %option{:value => "canine"}
-            Dog
-          %option{:value => "exotic"}
-            Other
-
-    .control-group
-      %label.control-label Patient Type
-      .controls
-        %select{:name => "patient_type"}
-          %option{:value => "current"}
-            Current Patient
-          %option{:value => "new"}
-            New Patient
-
-    .control-group
-      %label.control-label Phone
-      .controls
-        %input.input-small{:type => 'text', :name => "phone"}
-        %span(class="help-inline")
-      
-    .control-group
-      %label.control-label Email
-      .controls
-        %input{:type => 'text', :name => "email"}
-        %span(class="help-inline")
-  
-    %span.help-block
-  
-    .well.choices
+    .fields-section
+      .help-block.sched-warning
+        IMPORTANT: To schedule urgent or same day appointments please phone the hospital at 510.521.1700.
       .control-group
-        %label.control-label First Choice
+        %label.control-label Name
         .controls
-          %input.date-entry{:type => 'text', :name => "first_date"}
-          %select.input-medium{:name => "first_time"}
-            %option{:value => "anytime"}
-              Anytime
-            %option{:value => "morning"}
-              Morning
-            %option{:value => "afternoon"}
-              Afternoon
+          %input{:name => "first_name", :type => 'text', :placeholder => "First"}
+          %input{:name => "last_name", :type => 'text', :placeholder => "Last"}
           %span(class="help-inline")
 
       .control-group
-        %label.control-label Second Choice
+        %label.control-label Pet's Name
         .controls
-          %input.date-entry{:type => 'text', :name => "second_date"}
-          %select.input-medium{:name => "second_time"}
-            %option{:value => "anytime"}
-              Anytime
-            %option{:value => "morning"}
-              Morning
-            %option{:value => "afternoon"}
-              Afternoon
+          %input{:type => 'text', :name => "pet_name"}
+          %span(class="help-inline")
+      
+      .control-group
+        %label.control-label Pet's Species
+        .controls
+          %select.input-small{:name => "species"}
+            %option{:value => "feline"}
+              Cat
+            %option{:value => "canine"}
+              Dog
+            %option{:value => "exotic"}
+              Other
+
+      .control-group
+        %label.control-label Patient Type
+        .controls
+          %select{:name => "patient_type"}
+            %option{:value => "current"}
+              Current Patient
+            %option{:value => "new"}
+              New Patient
+
+      .control-group
+        %label.control-label Phone
+        .controls
+          %input.input-small{:type => 'text', :name => "phone"}
+          %span(class="help-inline")
+      
+      .control-group
+        %label.control-label Email
+        .controls
+          %input{:type => 'text', :name => "email"}
+          %span(class="help-inline")
+  
+      %span.help-block
+  
+      .well.choices
+        .control-group
+          %label.control-label First Choice
+          .controls
+            %input.date-entry{:type => 'text', :name => "first_date"}
+            %select.input-medium{:name => "first_time"}
+              %option{:value => "anytime"}
+                Anytime
+              %option{:value => "morning"}
+                Morning
+              %option{:value => "afternoon"}
+                Afternoon
+            %span(class="help-inline")
+
+        .control-group
+          %label.control-label Second Choice
+          .controls
+            %input.date-entry{:type => 'text', :name => "second_date"}
+            %select.input-medium{:name => "second_time"}
+              %option{:value => "anytime"}
+                Anytime
+              %option{:value => "morning"}
+                Morning
+              %option{:value => "afternoon"}
+                Afternoon
+            %span(class="help-inline")
+
+      .control-group
+        %label.control-label Reason for Visit
+        .controls
+          %input.span5{:type => 'text', :name => "reason"}
           %span(class="help-inline")
 
-    .control-group
-      %label.control-label Reason for Visit
-      .controls
-        %input.span5{:type => 'text', :name => "reason"}
-        %span(class="help-inline")
-
-    .control-group
-      %label.control-label Comments
-      .controls
-        %textarea.span5{:rows => '4', :name => "comments", :placeholder => "If you have scheduling constraints, prefer a particular doctor, or have additional details about your pet's care, etc. please enter them here."}
+      .control-group
+        %label.control-label Comments
+        .controls
+          %textarea.span5{:rows => '4', :name => "comments", :placeholder => "If you have scheduling constraints, prefer a particular doctor, or have additional details about your pet's care, etc. please enter them here."}
       
-    .control-group
-      .controls
-        %button.btn.send-button{:type => 'button'}
-          Send
+      .control-group
+        .controls
+          %button.btn.send-button{:type => 'button'}
+            Send

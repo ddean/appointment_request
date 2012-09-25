@@ -23,6 +23,14 @@
   .appointment-request {
     padding: 12px;
     background-color: rgb(191,214,185);
+    
+    .control-group {
+      margin-bottom: 12px;    
+    }
+    
+    .choices {
+      padding-bottom: 6px;
+    }
   }
 }
 
@@ -33,4 +41,9 @@
 .centered {
   margin-left: auto;
   margin-right: auto;
+}
+
+.after-send-message {
+  font-size: 18px;
+  padding: 20px 10px 20px 10px;
 }

@@ -10,10 +10,13 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = yield(:head)
-  %body
+  %body.body-ele
     #main{:role => "main"}
       .container
         .content
           .row
             = yield
           %footer
+    %script#after-send-template(type='text/template')
+      .after-send-message
+        Thank you! We have received your appointment request and we will contact you within the next business day to finalize your appointment.

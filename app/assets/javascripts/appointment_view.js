@@ -37,7 +37,11 @@ $(function($) {
         },
         
         success: function() {
-          
+          $(".fields-section", me.el).hide("slide", {direction: "up"}, 1000, function() {
+            
+            $(".fields-section", me.el).replaceWith(_.template($("#after-send-template").html()));
+            $(".fields-section", me.el).show();
+          });
         }
       });
     }
