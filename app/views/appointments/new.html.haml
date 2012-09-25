@@ -56,7 +56,7 @@
       .control-group
         %label.control-label First Choice
         .controls
-          %input{:type => 'date', :name => "first_date"}
+          %input.date-entry{:type => 'text', :name => "first_date"}
           %select.input-medium{:name => "first_time"}
             %option{:value => "anytime"}
               Anytime
@@ -69,7 +69,7 @@
       .control-group
         %label.control-label Second Choice
         .controls
-          %input{:type => 'date', :name => "second_date"}
+          %input.date-entry{:type => 'text', :name => "second_date"}
           %select.input-medium{:name => "second_time"}
             %option{:value => "anytime"}
               Anytime

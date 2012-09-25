@@ -2,6 +2,10 @@ $(function($) {
   var AppointmentView = Backbone.View.extend({
 
     initialize: function() {
+      $('.date-entry').datepicker({
+        minDate: "+1d",
+        maxDate: "+3m +1d"
+      });
     },
     
     events: {

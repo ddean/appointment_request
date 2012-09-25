@@ -20,7 +20,7 @@ class Appointment
   def initialize(attributes = {})
     attributes.each do |name, value|
       if name.ends_with?("_date")
-        value = Date.parse(value) rescue Date.new
+        value = Date.strptime(value, "%m/%d/%Y") rescue Date.new
       end 
       send("#{name}=", value)
     end
