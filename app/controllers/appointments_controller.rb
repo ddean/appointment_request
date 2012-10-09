@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   def new
     puts FBGraph::Canvas.parse_signed_request(AppointmentRequest::Application.config.FB_App_Secret, params[:signed_request]).inspect if params[:signed_request]
-    
+    @in_facebook = !!params[:signed_request]
     @appointment = Appointment.new
   end
   
