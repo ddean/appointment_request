@@ -22,6 +22,7 @@ gem 'jquery-rails'
 
 gem 'bootstrap-sass'
 gem 'haml'
+gem 'fbgraph'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

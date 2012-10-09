@@ -4,6 +4,8 @@ class AppointmentsController < ApplicationController
   end
   
   def create
+    puts FBGraph::Canvas.parse_signed_request(AppointmentRequest::Application.config.FB_App_Secret, params["signed_request"]).inspect if params["signed_request"]
+    
     @appointment = Appointment.new(params.select {|k| Appointment.attribute_method?(k.to_sym)})
     
     if @appointment.valid?

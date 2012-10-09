@@ -77,5 +77,7 @@ module AppointmentRequest
     config.action_mailer.default_url_options = {
       :host => "parkcentrevets.com"
     }
+    
+    config.FB_App_Secret = "1c9cd8ccc42528e442f9ca1ed9555461"
   end
 end
