@@ -69,7 +69,7 @@ module AppointmentRequest
       :domain               => "parkcentrevets.com",
       :user_name            => ENV['SMTP_USER_NAME'], #{}"appointment-requests@parkcentrevets.com",
       :password             => ENV['SMTP_PASSWORD'],
-      :authentication       => :plain
+      :authentication       => :plain.
       :enable_starttls_auto => true,
       :openssl_verify_mode  => 'none'
     }
