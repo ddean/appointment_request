@@ -65,11 +65,15 @@ module AppointmentRequest
     
     config.action_mailer.smtp_settings = {
       :address              => "smtp.parkcentrevets.com",
+      :port                 => 587,
       :domain               => "parkcentrevets.com",
       :user_name            => ENV['SMTP_USER_NAME'], #{}"appointment-requests@parkcentrevets.com",
       :password             => ENV['SMTP_PASSWORD'],
       :authentication       => :plain
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'
     }
+
     config.action_mailer.delivery_method = :smtp
     #config.action_mailer.logger = Logger.new(STDOUT)
     config.action_mailer.perform_deliveries = true
