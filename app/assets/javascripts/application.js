@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.datepicker
-//= require jquery.effects.slide
+//= require jquery.ui.effect-slide
 //= require bootstrap
 //= require underscore
 //= require backbone
