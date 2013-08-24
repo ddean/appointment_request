@@ -1,8 +1,9 @@
+require 'open-uri'
+
 namespace :appointments do
 
 	desc "ping"
 	task :refresh_page => :environment do
-	  uri = URI.parse("https://pcah-appointments.herokuapp.com")
-	  Net::HTTP.get(uri)
+		open('http://pcah-appointments.herokuapp.com') {|f| f.read }
 	end
 end
